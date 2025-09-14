@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "abouts",
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About",
+    "displayName": "BlogPosts",
     "description": "Write about yourself and the content you create"
   },
   "options": {
@@ -15,9 +15,15 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "date": {
+      "type": "date"
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }
